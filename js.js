@@ -63,8 +63,8 @@
         //自动播放函数
         autoPlay: function() {
             this.timer = setInterval(function() {
-                that.posterNextBtn.click()
-            }, that.setting.delay)
+                that.posterNextBtn.click();
+            }, that.setting.delay);
         },
         //旋转函数
         rotate: function(direction) {
@@ -95,7 +95,7 @@
                 });
 
                 that.posterItem.each(function(j) {
-                    $(this).css('zIndex', zIndexArr[j])
+                    $(this).css('zIndex', zIndexArr[j]);
                 });
             } else if (direction === 'right') {
                 that.posterItem.each(function() {
@@ -123,7 +123,7 @@
                 });
 
                 that.posterItem.each(function(j) {
-                    $(this).css('zIndex', zIndexArr[j])
+                    $(this).css('zIndex', zIndexArr[j]);
                 });
             }
         },
@@ -214,7 +214,7 @@
             var multiply = Math.ceil(this.posterItem.length / 2 - 1);
 
             for (var i = 0; i < multiply + 1; i++) {
-                lw = lw * that.setting.scale
+                lw = lw * that.setting.scale;
                 lh = lh * that.setting.scale; //最小图片宽高与scale乘积
             }
 
@@ -247,7 +247,7 @@
         setValue: function() {
             var w = (this.setting.width - this.setting.posterWidth) / 2;
             var h = this.setting.height;
-            var index = Math.ceil(this.posterItem.length / 2)
+            var index = Math.ceil(this.posterItem.length / 2);
             this.poster.css({
                 width: this.setting.width,
                 height: this.setting.height,
